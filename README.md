@@ -49,3 +49,8 @@ Grab the '63153' bit and find it in your list of ID's in the Array called 'posts
 Remove it and also remove every ID on the left up to that one, so that when you run it 
 again you aren't getting the voters through the same posts again.
 
+
+After you've created your __all_voters.csv__ file, here's a script to grab yourself a list of the 50 heaviest upvoters in your list: 
+
+```cat all_voters.csv | sort | uniq -c | sort | tail -50```
+

@@ -8,14 +8,14 @@ def get_votes_for(post, acc = [])
     votes = post.votes(order: 'asc')
   end
   acc += votes
-  print "\rCurrent votes for #{post['id']} is #{acc.length} / #{post['votes_count']}"
+  print "\rCurrent progress for #{post['id']} is #{acc.length} / #{post['votes_count']}"
   return get_votes_for(post, acc) if(votes.size > 0)
   puts ""
   acc
 end
 ############################################################
-client = ProductHunt::Client.new(PUT YOUR DEV TOKEN IN HERE)
-posts = PUT YOUR ARRAY HERE (SEE STEP 3)
+client = ProductHunt::Client.new('ENTER_YOUR_DEV_TOKEN_HERE')
+posts = [Fill_This_With_IDs]
 ############################################################
 CSV.open("all_voters.csv", "a") do |csv| 
   posts.each do |post_id|

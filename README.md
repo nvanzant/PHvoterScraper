@@ -41,9 +41,9 @@ Run script ```$ ruby scraper.rb```
 You're going to hit their rate limits, but they refresh every 15 minutes.. 
 So, in your terminal, once it chokes, you'll see something like this --> 
 
-```Processing post 63153: Firebase
-Current votes for 63153 is 1675 / 1675
-Done```
+> Processing post 63153: Firebase
+> Current votes for 63153 is 1675 / 1675
+> Done
 
 Grab the '63153' bit and find it in your list of ID's in the Array called 'posts'.. 
 Remove it and also remove every ID on the left up to that one, so that when you run it 
